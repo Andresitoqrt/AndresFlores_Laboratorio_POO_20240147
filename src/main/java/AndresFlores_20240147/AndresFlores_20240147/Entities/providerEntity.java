@@ -26,7 +26,7 @@ public class providerEntity {
     private String providerEmail;
     @Column(name = "PROVIDERCODE")
     private String providerCode;
-    @Column(name = "PROVIDERSTASTUS")
+    @Column(name = "PROVIDERSTATUS" ,nullable = false)
     private Integer providerStatus;
     @Column(name = "PROVIDERCOMMENTS")
     private String providerComments;

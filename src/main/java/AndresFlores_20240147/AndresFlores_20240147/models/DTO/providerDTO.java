@@ -20,7 +20,6 @@ public class providerDTO {
     private String providerEmail;
     @Size(min = 8, message = "El codigo debe ser valido")
     private String providerCode;
-    @NotBlank(message = "El Statustiene que ser valido")
     private Integer providerStatus;
     @NotBlank
     private String providerComments;
