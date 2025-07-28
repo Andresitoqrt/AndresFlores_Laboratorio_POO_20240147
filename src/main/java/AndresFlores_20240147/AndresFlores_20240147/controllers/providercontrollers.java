@@ -3,12 +3,11 @@ package AndresFlores_20240147.AndresFlores_20240147.controllers;
 import AndresFlores_20240147.AndresFlores_20240147.models.DTO.providerDTO;
 import AndresFlores_20240147.AndresFlores_20240147.service.providerservice;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/apiProvider")
@@ -23,4 +22,16 @@ public class providercontrollers {
         return acceso.getAllProviders();
     }
 
+    @PostMapping("/RegistrarProveedores")
+    @ResponseBody()
+    public String getProveedores(@RequestBody providerDTO proverdores){
+        Map<String,String> res = new HashMap<>();
+        if ("proveedores".equalsIgnoreCase(proverdores.getProviderName()) &&
+             "Proveedores".equalsIgnoreCase(proverdores.getProviderPhone())) {
+            return "{ /Message/ : /success/}";
+        }else {
+            return "{ /Message/ : /fail/}";
+        }
+
+    }
 }
