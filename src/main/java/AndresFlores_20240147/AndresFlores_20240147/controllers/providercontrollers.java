@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/ApiProvider")
 public class providercontrollers {
     @Autowired
-    private 
+    private
 
 }

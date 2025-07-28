@@ -10,9 +10,9 @@ import lombok.*;
 public class userDTO {
 
     private Long providerID;
-    @NotBlank(message = "Elnombre del provedor es obligatorio")
+    @NotBlank(message = "El nombre del provedor es obligatorio")
     private String providerName;
-    @Getter@Setter
+    @NotBlank(message = "El telefono tiene que ser valido")
     private String providerPhone;
     @NotBlank(message = "La direccion debe ser valida")
     private String providerAddress;
