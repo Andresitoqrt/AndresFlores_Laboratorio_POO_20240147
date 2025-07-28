@@ -7,7 +7,7 @@ import lombok.*;
 
 @ToString@EqualsAndHashCode
 @Getter@Setter
-public class userDTO {
+public class providerDTO {
 
     private Long providerID;
     @NotBlank(message = "El nombre del provedor es obligatorio")
@@ -20,9 +20,9 @@ public class userDTO {
     private String providerEmail;
     @Size(min = 8, message = "El codigo debe ser valido")
     private String providerCode;
-    @Getter@Setter
+    @NotBlank(message = "El Statustiene que ser valido")
     private Integer providerStatus;
-    @Getter@Setter
+    @NotBlank
     private String providerComments;
 
 }
