@@ -4,6 +4,7 @@ import AndresFlores_20240147.AndresFlores_20240147.models.DTO.providerDTO;
 import AndresFlores_20240147.AndresFlores_20240147.service.providerservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +18,9 @@ public class providercontrollers {
     private providerservice acceso;
 
 
-    @GetMapping("/Proveedores")
+    @GetMapping("/Proveedoresconsulta")
     public List<providerDTO> datosProveedores(){
         return acceso.getAllProviders();
     }
+
 }
